@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Gamepro5</title>
+    <meta charset="UTF-8">
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="basic.css">
+    <style media="screen">
+      body {
+        margin: 0;
+        margin-top: 40px;
+      }
+      stuff {
+        width: 100%;
+        display: inline-block;
+        overflow-y: hidden;
+        position: relative;
+        background-color: rgba(0,0,0,0.03);
+        min-height: 400px;
+      }
+      stuff h1, stuff p {
+        width: 40%;
+        margin: 10px 0;
+        padding-left: 50px;
+      }
+      stuff h1 {
+        padding-top: 50px
+      }
+      stuff p {
+        padding-bottom: 50px
+      }
+      back {
+        background-image: url('imgs/person.png');
+        background-position: -300px -100px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        clip-path: circle(50% at 100% 50%);
+      }
+      @media (min-width: 1500px) {
+        back {
+          background-position: 30px -100px;
+        }
+      }
+      @media (max-width: 1250px) {
+        back {
+          background-position: -400px -100px;
+        }
+      }
+      @media (max-width: 1100px) {
+        back {
+          background-position: -500px -100px;
+        }
+      }
+      @media (max-width: 950px) {
+        back {
+          background-position: -600px -100px;
+        }
+      }
+      @media (max-width: 820px) {
+        back {
+          background-position: -700px -100px;
+        }
+      }
+      @media (max-width: 700px) {
+        back {
+          background-position: -800px -100px;
+        }
+      }
+      @media (max-width: 550px) {
+        back {
+          background-position: -900px -100px;
+        }
+      }
+      /* I give up */
+      @media (max-width: 600px) {
+        stuff h1, stuff p {
+          width: 50%;
+          margin: 10px 0;
+          padding-left: 15px;
+        }
+        stuff h1 {
+          padding-top: 10px
+        }
+        stuff p {
+          padding-bottom: 10px
+        }
+      }
+      @media (max-width: 500px) {
+        back {
+          clip-path: none;
+          background-position: left;
+          background-size: cover;
+        }
+        stuff h1, stuff p {
+          width: 100%;
+          box-sizing: border-box;
+          padding-right: 15px;
+          color: white;
+          text-shadow: 0 0 3px rgba(0,0,0,0.3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <logo>Gamepro5</logo>
+      <menubtn></menubtn>
+      <menucontainer>
+        <a href class='active'>Home</a>
+        <a href="contact">Contact</a>
+        <a href="https://play.google.com/store/music/artist/Gamepro5?id=Ajmra62kkt3ebvpoqn2guortpma" class="social" id="gp">gp</a>
+        <a href="https://plus.google.com/u/0/+Gamepro5" class="social" id="g-">g+</a>
+        <a href="https://www.youtube.com/Gamepro5" class="social" id="yt">yt</a>
+      </menucontainer>
+    </nav>
+    <stuff>
+      <back></back>
+      <h1>Welcome to Gamepro5!</h1>
+      <p>Gamepro5 is a YouTuber and a Google Play Music Artist. He makes gaming YouTube Videos and makes Techno and Dubstep music on GarageBand. He loves technology and computers and knows a lot about them. He got the idea for his username because he wanted a name that represented him, however, "Gamepro" was already taken, so he added his favorite number at the end, and "Gamepro5" was born. He also came up with his logo by himself. His goal was always to be popular (and rich).</p>
+    </stuff>
+    <script src="basic.js" charset="utf-8"></script>
+  </body>
+  <!-- MADE BY SEAN -->
+</html>
