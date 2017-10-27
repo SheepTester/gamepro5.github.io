@@ -1,0 +1,206 @@
+* {
+  /* REMOVE PESKY BLACK BOX THING THAT APPEARS WHEN YOU TAP ON iOS */
+  -webkit-tap-highlight-color: transparent;
+}
+:focus {
+  /* REMOVE BLUE BLURRY THING */
+  outline: none;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  background-image: url("https://gamepro5.github.io/images/background.jpg");
+  background-color: #11100E;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  line-height: 1;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+}
+.container {
+  border: 5px solid #F44336;
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #36393E;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+}
+.name {
+  font-size: 60px;
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+  margin: 40px 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.navigation li {
+  display: inline-block;
+}
+.navigation a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 5px;
+  text-transform: lowercase;
+}
+.navigation li.active a {
+  background-color: #F44336;
+  color: rgba(255,255,255,0.9);
+  cursor: default;
+}
+.navigation a:hover, .navigation a:focus {
+  background-color: rgba(24,25,28,0.3);
+  color: rgba(255,255,255,0.9);
+}
+.content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 40px;
+  margin-top: 0;
+}
+.content a {
+  color: #F44336;
+  text-decoration: none;
+}
+.content a:not(.button):hover, .content a:not(.button):focus {
+  text-decoration: underline;
+}
+.content h1, .content h2, .content h3 {
+  font-weight: normal;
+}
+.content .button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  text-transform: lowercase;
+  background-color: #F44336;
+  color: rgba(255,255,255,0.9);
+  border: 2px solid transparent;
+  transition: all .2s;
+}
+.content .button:hover, .content .button:focus {
+  background-color: rgba(255,255,255,0.9);
+  color: #F44336;
+  border-color: #F44336;
+}
+.content iframe {
+  border: none;
+  max-width: 100%;
+}
+.content hr {
+  border-color: #F44336;
+}
+.content .accordion {
+  background-color: #484B52;
+  border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .2s;
+}
+.content .accordion .opener {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #f6f6f7;
+  font: inherit;
+  cursor: pointer;
+  background-color: #42464D;
+  opacity: 0.6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 5px;
+  height: 40px;
+}
+.content .accordion .opener:hover, .content .accordion .opener:focus {
+  opacity: 1;
+}
+.quickbtn {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 15px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all .2s;
+}
+.quickbtn:hover, .quickbtn:focus {
+  transform: scale(1.1);
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-top: 100px;
+  width: 250px;
+  background-color: #2F3136;
+  transition: all .2s;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar h2 {
+  font-size: 25px;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 30px 20px;
+}
+.links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.links a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 16px;
+  color: #f6f6f7;
+  opacity: 0.3;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.links a:hover, .links a:focus {
+  opacity: 1;
+  background-color: #42464D;
+}
+@media (max-width: 800px) {
+  .container {
+    margin: 0;
+  }
+}
