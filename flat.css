@@ -129,6 +129,7 @@ h1, h2, h3 {
   color: rgba(255,255,255,0.9);
   border: none;
   cursor: pointer;
+  line-height: 1.5;
   transition: all .2s;
 }
 .button:hover, .button:focus {
