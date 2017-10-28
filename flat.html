@@ -7,9 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="flat.css">
+    <script src="gamepro5.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
+    <!--
+      FILES YOU NEED TO STEAL:
+      flat.html
+      flat.css
+      sidebar.js
+      gamepro5.js
+      imgs/youtube.svg
+      imgs/googleplus.svg
+      imgs/googleplay.svg
+      imgs/discord.svg
+    -->
+    <div class="container closedalert">
+      <div class="alert" data-id="game1">
+        <p>FEATURED GAME:</p>
+        <p>Gamepro5's Game BETA: v1.8</p>
+        <a href="https://gamepro5.github.io/programs/gamepro5_game.html" class="button">PLAY</a>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="alertopen">
+        <path stroke="white" fill='none' d="M0 8h16M8 16V0"/>
+      </svg>
       <h1 class="name">Gamepro5</h1>
       <ul class="navigation">
         <li class="active"><a href="#pretend you got linked to home">home</a></li>
@@ -20,7 +40,7 @@
         <li><a href="#pretend you got linked to contact">contact</a></li>
       </ul>
       <div class="content">
-        <p>Gamepro5 is a YouTuber and a Google Play Music Artist. He makes gaming YouTube Videos and makes Techno and Dubstep music on GarageBand. He loves technology and computers and knows a lot about them. He got the idea for his username one time when he was 7 years old he thought of this (kind of cheesy) username - and has been too lazy to change it. "Gamepro" was already taken, so he added his favorite number at the end, and "Gamepro5" was born. He also came up with his logo by himself (When he was 10). His goal is to make fun gaming content, fun techno music on Google Play Music, and to be popular. :)</p>
+        <p class="indent">Gamepro5 is a YouTuber and a Google Play Music Artist. He makes gaming YouTube Videos and makes Techno and Dubstep music on GarageBand. He loves technology and computers and knows a lot about them. He got the idea for his username one time when he was 7 years old he thought of this (kind of cheesy) username - and has been too lazy to change it. "Gamepro" was already taken, so he added his favorite number at the end, and "Gamepro5" was born. He also came up with his logo by himself (When he was 10). His goal is to make fun gaming content, fun techno music on Google Play Music, and to be popular. :)</p>
         <h2>Contact me</h2>
         <p>(<a href="mailto:gamepro543@gmail.com">gamepro543@gmail.com</a>)</p>
         <a href="mailto:gamepro543@gmail.com" class="button">gamepro543@gmail.com</a>
@@ -34,21 +54,38 @@
           <p><u>Bug Fixes</u><br>
           General bug fixes, like the game carrying on even when the player health hits 0.</p>
         </div>
+        <a data-opens="#notes1">view patch notes</a>
+        <div id="notes1">
+          <p><u>Game Controls Changed</u><br>
+          The Red Player controls are now changed when doing an AI match for better ergenomic posture: Space is shoot, M is minigun.</p>
+          <p><u>Added Sound Effects</u><br>
+          Its not mutch, but now you will hear a little pop when a player is hit. Oh the excitement.</p>
+          <p><u>Bug Fixes</u><br>
+          General bug fixes, like the game carrying on even when the player health hits 0.</p>
+        </div>
+        <div class="center">
+          <a href="https://www.youtube.com/c/Gamepro5?sub_confirmation=1" class="button big">SUBSCRIBE</a>
+        </div>
         <h1>Featured video</h1>
-        <iframe width="850" height="500" allowfullscreen="true" src="https://www.youtube.com/embed/Z4ZcFaoEENs"></iframe>
+        <iframe width="850" height="500" allowfullscreen="true" src="https://www.youtube.com/embed/Z4ZcFaoEENs" id='featured'></iframe>
+      </div>
+      <div class="footer">
+        <h2>Quick Links</h2>
+        <ul class="links">
+          <li><a href="https://www.youtube.com/channel/UCFXJec3TUakUam-Xgll2-Ow"><img src="imgs/youtube.svg" alt="YouTube channel"></a></li>
+          <li><a href="https://plus.google.com/+Gamepro5"><img src="imgs/googleplus.svg" alt="Google+"></a></li>
+          <li><a href="https://play.google.com/store/music/artist/Gamepro5?id=Ajmra62kkt3ebvpoqn2guortpma&hl=en"><img src="imgs/googleplay.svg" alt="Google Play"></a></li>
+          <li><a href="https://discordapp.com/invite/4N47Cbs"><img src="imgs/discord.svg" alt="Discord server"></a></li>
+        </ul>
+        <ul class="links">
+          <li><a href="https://playoverwatch.com/en-us/career/pc/us/Gamepro5-1279">Overwatch profile</a></li>
+          <li><a href="https://us.battle.net/forums/en/overwatch/search?a=Gamepro5%231279">Overwatch forum posts</a></li>
+        </ul>
       </div>
     </div>
-    <img src="https://gamepro5.github.io/images/gamepro5.jpg" alt="GAMEPRO5" class="quickbtn" tabindex="0">
-    <div class="sidebar">
-      <h2>Quick Links</h2>
-      <ul class="links">
-        <li><a href="https://www.youtube.com/channel/UCFXJec3TUakUam-Xgll2-Ow">YouTube channel</a></li>
-        <li><a href="https://plus.google.com/+Gamepro5">Google+</a></li>
-        <li><a href="https://play.google.com/store/music/artist/Gamepro5?id=Ajmra62kkt3ebvpoqn2guortpma&hl=en">Google Play</a></li>
-        <li><a href="https://discordapp.com/invite/4N47Cbs">Discord server</a></li>
-        <li><a href="https://playoverwatch.com/en-us/career/pc/us/Gamepro5-1279">Overwatch profile</a></li>
-        <li><a href="https://us.battle.net/forums/en/overwatch/search?a=Gamepro5%231279">Overwatch forum posts</a></li>
-      </ul>
+    <div class="disclaimer">
+      <button class="button">enter secret zone</button>
+      <p>Website made by Gamepro5 and was helped by Sheeptester. Visit him <a href="https://sheeptester.github.io/">HERE</a>.</p>
     </div>
 
     <script src="../sheep.js" charset="utf-8"></script>

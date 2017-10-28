@@ -31,6 +31,41 @@ body {
   color: rgba(255,255,255,0.7);
   position: relative;
 }
+.alert {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: #F44336;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  overflow: hidden;
+  transition: all .2s;
+}
+.closedalert .alert {
+  padding: 0 20px;
+}
+.alertopen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+.alertopen path {
+  transform-origin: center;
+  transform: translate(0,-3px) rotate(-45deg);
+  stroke-dasharray: 8;
+  transition: all .2s;
+}
+.closedalert .alertopen path {
+  transform: translate(0,3px) rotate(-45deg);
+  stroke-dasharray: 8;
+  stroke-dashoffset: 8;
+}
 .name {
   font-size: 60px;
   text-align: center;
@@ -57,7 +92,6 @@ body {
   padding: 10px;
   border-radius: 2px;
   margin: 5px;
-  text-transform: lowercase;
 }
 .navigation li.active a {
   background-color: #F44336;
@@ -74,32 +108,40 @@ body {
   margin: 40px;
   margin-top: 0;
 }
-.content a {
+.content a:not(.button), .disclaimer a {
   color: #F44336;
   text-decoration: none;
+  cursor: pointer;
 }
-.content a:not(.button):hover, .content a:not(.button):focus {
+.content a:not(.button):hover, .content a:not(.button):focus, .disclaimer a:hover, .disclaimer a:focus {
   text-decoration: underline;
 }
-.content h1, .content h2, .content h3 {
+h1, h2, h3 {
   font-weight: normal;
 }
-.content .button {
+.button {
   display: inline-block;
   text-decoration: none;
   padding: 5px 10px;
   border-radius: 5px;
   margin: 5px;
-  text-transform: lowercase;
   background-color: #F44336;
   color: rgba(255,255,255,0.9);
-  border: 2px solid transparent;
+  border: none;
+  cursor: pointer;
   transition: all .2s;
 }
-.content .button:hover, .content .button:focus {
+.button:hover, .button:focus {
   background-color: rgba(255,255,255,0.9);
   color: #F44336;
-  border-color: #F44336;
+}
+.alert .button {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.alert .button:hover, .alert .button:focus {
+  background-color: rgba(255,255,255,0.9);
+  color: #F44336;
 }
 .content iframe {
   border: none;
@@ -108,7 +150,7 @@ body {
 .content hr {
   border-color: #F44336;
 }
-.content .accordion {
+.accordion {
   background-color: #484B52;
   border-radius: 5px;
   padding: 20px;
@@ -117,7 +159,10 @@ body {
   overflow: hidden;
   transition: all .2s;
 }
-.content .accordion .opener {
+.accordion.active {
+  padding-top: 40px;
+}
+.accordion .opener {
   position: absolute;
   top: 0;
   left: 0;
@@ -134,58 +179,31 @@ body {
   padding: 5px;
   height: 40px;
 }
-.content .accordion .opener:hover, .content .accordion .opener:focus {
+.accordion .opener:hover, .accordion .opener:focus {
   opacity: 1;
 }
-.quickbtn {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 15px;
-  cursor: pointer;
-  z-index: 1;
-  transition: all .2s;
-}
-.quickbtn:hover, .quickbtn:focus {
-  transform: scale(1.1);
-}
-.sidebar {
-  position: fixed;
-  left: -250px;
-  top: 0;
-  height: 100%;
-  box-sizing: border-box;
+.footer {
   padding: 20px;
-  padding-top: 100px;
-  width: 250px;
   background-color: #2F3136;
-  transition: all .2s;
 }
-.sidebar.active {
-  left: 0;
-}
-.sidebar h2 {
+.footer h2 {
   font-size: 25px;
   color: rgba(255,255,255,0.9);
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 10px 0;
+  text-align: center;
   font-weight: normal;
-  text-align: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 30px 20px;
 }
 .links {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
+}
+.links li {
+  display: inline-block;
 }
 .links a {
-  display: block;
+  display: inline-block;
   color: inherit;
   text-decoration: none;
   font-size: 16px;
@@ -198,6 +216,24 @@ body {
 .links a:hover, .links a:focus {
   opacity: 1;
   background-color: #42464D;
+}
+.links a img {
+  height: 1.5em;
+}
+.disclaimer {
+  font-size: 16px;
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  margin: 40px 0;
+}
+.center {
+  text-align: center;
+}
+.big {
+  font-size: 1.5em;
+}
+.indent {
+  text-indent: 1em;
 }
 @media (max-width: 800px) {
   .container {
